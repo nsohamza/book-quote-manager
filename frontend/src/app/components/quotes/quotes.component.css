@@ -1,0 +1,113 @@
+/* Add this to your quotes.component.scss or css file */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #34495e;
+  font-weight: 500;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  height: auto;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+/* Make the quote input box longer */
+#text {
+  min-height: 60px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.btn-primary {
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+  border-radius: 8px !important;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+  color: #495057;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .list-group-item {
+    margin-bottom: 8px;
+  }
+}
