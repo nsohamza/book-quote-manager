@@ -1,1 +1,0 @@
-# book-quote-manager

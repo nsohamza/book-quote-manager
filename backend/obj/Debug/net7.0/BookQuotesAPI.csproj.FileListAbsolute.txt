@@ -1,0 +1,7 @@
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.csproj.AssemblyReference.cache
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.AssemblyInfoInputs.cache
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.AssemblyInfo.cs
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.csproj.CoreCompileInputs.cache
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/nso/BookQuotesApp/BookQuotesAPI/obj/Debug/net7.0/BookQuotesAPI.MvcApplicationPartsAssemblyInfo.cache

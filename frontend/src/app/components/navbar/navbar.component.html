@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    <li *ngIf="isUserAuthenticated()">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Book View</a>
+    </li>
+    <li *ngIf="isUserAuthenticated()">
+      <a routerLink="/quotes" routerLinkActive="active">My Quotes</a>
+    </li>
+    <li *ngIf="!isUserAuthenticated()">
+      <a class="login" routerLink="/login" routerLinkActive="active"></a>
+    </li>
+    <li *ngIf="isUserAuthenticated()">
+      <button (click)="NotAuthenticated()">Logout</button>
+    </li>
+  </ul>
+</nav>
+

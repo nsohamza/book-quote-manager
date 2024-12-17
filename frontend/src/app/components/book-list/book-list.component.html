@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h2>Books List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Publication Date</th>
+    </tr>
+  </thead> 
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.publicationDate | date }}</td>
+        <td>
+          <button class="btn btn-warning" [routerLink]="['/books/edit', book.id]">Edit</button>
+          <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>  
+  </table>
+  <button class="btn btn-primary mb-3" routerLink="/books/new">Add New Book</button>
+
+</div>
+
+
+
