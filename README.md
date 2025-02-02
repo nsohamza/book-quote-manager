@@ -1,31 +1,40 @@
+Responsive CRUD Application with Token Management
 
-Responsive CRUD application with token management and built in Angular 18 and .NET 8 C# API
-You have two weeks to complete this task. The goal is to create a responsive CRUD web application using Angular 18 for the front-end and .NET 8 C# for the back-end API. 
+Built with Angular 18 (Frontend) and .NET 8 C# API (Backend)
 
-In addition, you will need to implement token management for user verification, use Bootstrap and Font Awesome icons for styling, and add a “My Quotes” page where users can add and view their favorite quotes.
+Overview
+This project aims to create a responsive CRUD web application using Angular 18 for the frontend and .NET 8 C# for the backend API. The application will include token management for user authentication, utilize Bootstrap for styling, and Font Awesome for icons. Additionally, the application will feature a "My Quotes" page where users can view and add their favorite quotes.
 
-Requirements:
-Implement a web application with a page that displays a list of all books. 
-Create a home page with a button to add a new book.
-Clicking on the “Add new book” button should redirect the user to a form where they can enter information about a new book (e.g. title, author, publication date). 
-After submitting the form, the user should be redirected back to the home page, where they can see the new book added to the list. 
-Each book in the list should have an 'Edit' button that takes the user to a form where they can edit the details of the book.
-After submitting the form, the user should be redirected back to the home page, where they can see the updated book details in the list. 
-Each book in the list should have a “Delete” button that allows the user to delete the book. 
-After deleting a book, the user should see the book removed from the list.
+Features
+1. Book CRUD Functionality
+Home Page: Displays a list of books with the following operations:
+Add New Book: Button that redirects to a form to add a new book (fields: title, author, publication date).
+Edit Book: Each book has an "Edit" button that redirects to a form where users can modify book details.
+Delete Book: Each book has a "Delete" button to remove it from the list.
 
-Token management:
-Implement user authentication with JWT (JSON Web Tokens). 
-Create a simple login page where users can enter their credentials (e.g. username and password). 
-After successful login, the back-end should generate a token and send it back to the front-end. 
-The front-end should store the token securely (e.g. in local storage or a cookie) and use it for subsequent API requests to the back-end. Implement token validation on the back-end to ensure that only authenticated users can access the CRUD operations. 
+2. Token Management (JWT Authentication)
+User Authentication: Implement login functionality using JWT (JSON Web Tokens).
+Simple login page where users enter their credentials (username, password).
+After successful login, the backend generates a token and sends it to the frontend.
+Frontend stores the token securely (local storage or cookies) and uses it for subsequent API requests.
+Token Validation: The backend validates the token to ensure only authenticated users can perform CRUD operations.
 
-My Citations page:
-Create a separate view called “My Quotes”. Display the list of quotes you like. 
-There should be a menu so that you can switch between the book view and the quote view
+3. My Quotes Page
+A separate view called “My Quotes” where users can view and manage their favorite quotes.
+Include a menu to toggle between the book view and the quote view.
 
+4. Responsive Design
+Ensure the application is fully responsive across all screen sizes (desktops, tablets, and mobile devices).
+Test the application by resizing the browser window to ensure proper layout adjustment.
+Ensure navigation menus collapse into a mobile-friendly version on smaller screens.
+Verify proper spacing and alignment of form fields, buttons, and UI elements on different viewports and devices (e.g., smartphones, tablets).
 
-Responsive design testing:
-Ensure that the application's layout and components adapt smoothly to different screen sizes, including desktops, tablets, and mobile devices. Test the application by resizing the browser window and verify that all elements adjust correctly. Verify that navigation menus collapse to a responsive mobile menu on smaller screens. Verify that form fields, buttons, and other UI elements maintain proper spacing and alignment across different viewports. Test the application on different devices (e.g. smartphones, tablets) and browsers to ensure consistent behavior.
-Bootstrap and Font Awesome:
-Use Bootstrap to create a responsive and visually appealing layout for the application. Use Bootstrap classes to design buttons, forms, and other UI components. Include Font Awesome icons to enhance the visual elements of the application. Verify that the Font Awesome icons are displayed correctly and used properly throughout the application.
+5. Bootstrap and Font Awesome Integration
+Bootstrap: Use Bootstrap to create a responsive, visually appealing layout with responsive grids, buttons, and forms.
+Font Awesome: Use Font Awesome icons to enhance the UI elements (e.g., for buttons, actions).
+Ensure that all icons are properly displayed and used in accordance with the design.
+
+Requirements
+Backend: .NET 8 C# API for handling CRUD operations and JWT authentication.
+Frontend: Angular 18 for creating the responsive interface and handling API requests.
+UI Framework: Bootstrap for responsive design and Font Awesome for icons.

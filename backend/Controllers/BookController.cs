@@ -41,41 +41,41 @@ namespace BookQuotesAPI.Controllers
         }
 
         // POST: api/Books
-     
+
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(BookDto bookDto)
         {
-         var book = new Book
+            var book = new Book
+            {
+                Title = bookDto.Title,
+                Author = bookDto.Author,
+                PublicationDate = bookDto.PublicationDate
+            };
+
+            _context.Books.Add(book);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetBook), new { id = book.BookId }, book);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBook(int id, BookDto bookDto)
         {
-             Title = bookDto.Title,
-              Author = bookDto.Author,
-              PublicationDate = bookDto.PublicationDate
-        };
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
 
-         _context.Books.Add(book);
-          await _context.SaveChangesAsync();
+            book.Title = bookDto.Title ?? book.Title;
+            book.Author = bookDto.Author ?? book.Author;
+            book.PublicationDate = bookDto.PublicationDate;
 
-         return CreatedAtAction(nameof(GetBook), new { id = book.BookId}, book);
-    }   
+            await _context.SaveChangesAsync();
 
-[HttpPut("{id}")]
-public async Task<IActionResult> UpdateBook(int id, BookDto bookDto)
-{
-    var book = await _context.Books.FindAsync(id);
-    if (book == null)
-    {
-        return NotFound();
-    }
+            return NoContent();
+        }
 
-    book.Title = bookDto.Title ?? book.Title;
-    book.Author = bookDto.Author ?? book.Author;
-    book.PublicationDate = bookDto.PublicationDate;
-
-    await _context.SaveChangesAsync();
-
-    return NoContent();
-}
-   
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int id)
         {
